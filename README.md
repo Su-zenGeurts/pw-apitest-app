@@ -13,5 +13,4 @@
 * Section 7: Working with APIs
 
 ### .gitignore
-In reality it is best to leave the user in .auth folder local
-.auth/
+In reality it is best to leave the user in `.auth` folder local
