@@ -9,7 +9,7 @@ async function globalSetup() {
     
     const responseToken = await context.post('https://conduit-api.bondaracademy.com/api/users/login', {
         data: {
-            "user": { "email": "pwtest@test.com", "password": "Welcome1" }
+            "user": { "email": "su123@test.com", "password": "su123" }
         }
     })
     const responseBody = await responseToken.json()
@@ -26,6 +26,7 @@ async function globalSetup() {
             Authorization: `Token ${process.env.ACCESS_TOKEN}`
         }
     })
+    console.log(articleResponse)
     expect(articleResponse.status()).toEqual(201)
     const response = await articleResponse.json()
     const slugId = response.article.slug
